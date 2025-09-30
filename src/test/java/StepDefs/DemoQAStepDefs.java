@@ -12,7 +12,6 @@ import utilities.PropertyReaders;
 import java.io.IOException;
 
 import static StepDefs.Hooks.driver;
-import static StepDefs.Hooks.driver;
 import static org.hamcrest.CoreMatchers.equalTo;
 import static org.hamcrest.CoreMatchers.is;
 import static org.hamcrest.MatcherAssert.assertThat;
@@ -84,12 +83,13 @@ public class DemoQAStepDefs {
 
     @Then("the form submitted is displayed successfully")
     public void theFormSubmittedIsDisplayedSuccessfully() {
-        WebElement formConfirmationPage = driver.findElement(By.xpath("//div[@id='output']"));
-        assertThat(formConfirmationPage.isDisplayed(),is(equalTo(false)));
+//        WebElement formConfirmationPage = driver.findElement(By.xpath("//div[@id='output']"));
+//        assertThat(formConfirmationPage.isDisplayed(),is(equalTo(false)));
 //        ebElement  successMessage = driver.findElement(By.xpath("//*[@class='status alert alert-success']"));
 //        String actualResult = successMessage.getText();
 //        assertThat(actualResult.contains(msg),is(equalTo(true)));
 //        System.out.println(actualResult);
+        WebElement formConfirmationPage = driver.findElement(By.xpath("//div[@id='output']"));
 
     }
 

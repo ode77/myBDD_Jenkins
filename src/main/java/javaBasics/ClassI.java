@@ -1,6 +1,6 @@
 package javaBasics;
 
-public class ClassA {
+public class ClassI {
     public int max ( int X, int Y){
         if (X > Y)
             return X;

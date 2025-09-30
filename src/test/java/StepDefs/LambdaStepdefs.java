@@ -25,13 +25,11 @@ import static org.hamcrest.MatcherAssert.assertThat;
 public class LambdaStepdefs {
     @Given("I am on the Lambdatest home page")
     public void i_am_on_the_lambdatest_home_page() throws IOException {
-        // Write code here that turns the phrase above into concrete actions
         PropertyReaders propReaders = new PropertyReaders();
         driver.get(propReaders.getLambdaTest_Url());
     }
     @Then("I Verify that home page is visible successfully")
     public void i_verify_that_home_page_is_visible_successfully() {
-        // Write code here that turns the phrase above into concrete actions
         WebElement homePageIsVisible = driver.findElement(By.xpath("//div[@id='main-header']"));
         assertThat(homePageIsVisible.isDisplayed(),is(equalTo(true)));
     }
@@ -51,7 +49,6 @@ public class LambdaStepdefs {
 
     @When("I enter valid details for {string}, {string}, {string}, {string}, {string}")
     public void i_enter_valid_details_for(String firstName, String lastName, String email, String telephone, String pword) {
-        // Write code here that turns the phrase above into concrete actions
         WebElement setFirstName = driver.findElement(By.name("firstname"));
         setFirstName.sendKeys(firstName);
         WebElement setLastName = driver.findElement(By.name("lastname"));
@@ -71,20 +68,17 @@ public class LambdaStepdefs {
     }
     @When("I accept the privacy policy")
     public void i_accept_the_privacy_policy() {
-        // Write code here that turns the phrase above into concrete actions
         WebElement clickOnPrivacyPolicy = driver.findElement(By.xpath("//div[@class='float-right']"));
         clickOnPrivacyPolicy.click();
     }
     @When("I click on Continue button on the Register and Account page")
     public void i_click_on_continue_button_on_the_register_and_account_page() {
-        // Write code here that turns the phrase above into concrete actions
         WebElement clickOnContinue = driver.findElement(By.xpath("//input[@value='Continue']"));
         clickOnContinue.click();
     }
 
     @Then("Register Confirmation page is displayed")
     public void register_confirmation_page_is_displayed() {
-        // Write code here that turns the phrase above into concrete actions
         WebElement confirmationPage = driver.findElement(By.xpath("//h1[@class='page-title my-3']"));
 //        assertThat(confirmationPage.isDisplayed(),is(equalTo(true)));
         assertThat(confirmationPage.getText(),is(equalTo("Your Account Has Been Created!")));
@@ -92,7 +86,6 @@ public class LambdaStepdefs {
     }
     @Then("I {string} of my account")
     public void i_of_my_account(String string) {
-        // Write code here that turns the phrase above into concrete actions
         WebElement clickOnLogout = driver.findElement(By.xpath("//a[contains(text(),' Logout')]"));
         clickOnLogout.click();
     }
@@ -128,13 +121,11 @@ public class LambdaStepdefs {
     }
     @Then("I Verify that my account page is displayed successfully")
     public void i_verify_that_my_account_page_is_displayed_successfully() {
-        // Write code here that turns the phrase above into concrete actions
         WebElement accountPageIsDisplay = driver.findElement(By.xpath("//h2[normalize-space()='My Account']"));
         assertThat(accountPageIsDisplay.isDisplayed(),is(equalTo(true)));
     }
     @When("I click on edit your account information section")
     public void i_click_on_edit_your_account_information_section() {
-        // Write code here that turns the phrase above into concrete actions
         WebElement clickOnEditInformation = driver.findElement(By.xpath("(//div[@class='col-6 col-sm-4 col-lg-2_4'])[1]"));
         clickOnEditInformation.click();
 
@@ -155,34 +146,29 @@ public class LambdaStepdefs {
     }
     @Then("I Verify that account information page is displayed successfully")
     public void i_verify_that_account_information_page_is_displayed_successfully() {
-        // Write code here that turns the phrase above into concrete actions
         WebElement accountInfoPageIsDisplay = driver.findElement(By.xpath("//ol[@class='breadcrumb']"));
         assertThat(accountInfoPageIsDisplay.getText(),is(equalTo("Account Edit Information")));
 
     }
     @Then("I click on back button to return to my account")
     public void i_click_on_back_button_to_return_to_my_account() {
-        // Write code here that turns the phrase above into concrete actions
         WebElement clickOnBackBtn = driver.findElement(By.xpath(" //a[@class='btn btn-secondary']"));
         clickOnBackBtn.click();
     }
     @When("I click on Logout link from the right hand menu")
     public void i_click_on_logout_link_from_the_right_hand_menu() {
-        // Write code here that turns the phrase above into concrete actions
         WebElement clickOnLogoutBtn = driver.findElement(By.xpath(" //a[contains(text(),'Logout')]"));
         clickOnLogoutBtn.click();
 
     }
     @Then("Account Logout Page is Displayed")
     public void account_logout_page_is_displayed() {
-        // Write code here that turns the phrase above into concrete actions
         WebElement accountLogoutPageIsDisplay = driver.findElement(By.xpath("//h1[@class='page-title my-3']"));
         assertThat(accountLogoutPageIsDisplay.getText(),is(equalTo("Account Logout")));
 
     }
     @Then("I enter valid details for {string},{string}, {string},{string}")
     public void i_enter_valid_details_for(String firstName, String email, String telephone , String pword) {
-        // Write code here that turns the phrase above into concrete actions
         WebElement setFirstName = driver.findElement(By.name("firstname"));
         setFirstName.sendKeys(firstName);
         WebElement setEmail = driver.findElement(By.name("email"));
@@ -194,7 +180,6 @@ public class LambdaStepdefs {
     }
     @Then("I enter Invalid detail for {string}")
     public void i_enter_invalid_detail_for(String lastName) {
-        // Write code here that turns the phrase above into concrete actions
         WebElement setInvalidLastName =
                 driver.findElement(By.id("input-lastname"));
         setInvalidLastName.sendKeys(lastName);

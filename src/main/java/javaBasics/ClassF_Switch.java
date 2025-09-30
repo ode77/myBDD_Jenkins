@@ -1,6 +1,9 @@
 package javaBasics;
 
-public class ClassF {
+public class ClassF_Switch {
+
+//    Switch statement is used to select one of many code blocks to be executed.
+
     public static void main(String[] args) {
         int Day = 2;
         switch (Day) {
